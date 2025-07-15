@@ -1,45 +1,19 @@
 package com.task.handle.Comments;
 
+import jakarta.validation.constraints.*;
+import lombok.*;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class ComModel {
+    private Long id;
 
-    private int id;
+    @NotBlank(message = "Content must not be blank")
+    @Size(min = 2, max = 255, message = "Content must be between 2 and 255 characters")
     private String content;
-    private String author;
-    private int tagId;
 
-    public ComModel() {}
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-
-    public int getTagId() {
-        return tagId;
-    }
-
-    public void setTagId(int tagId) {
-        this.tagId = tagId;
-    }
-
+    @NotNull(message = "Tag ID must not be null")
+    private Long tagId;
 }

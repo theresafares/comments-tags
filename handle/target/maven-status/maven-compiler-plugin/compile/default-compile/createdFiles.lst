@@ -1,1 +1,15 @@
 com/task/handle/HandleApplication.class
+com/task/handle/Tags/TagService.class
+com/task/handle/Comments/ComDTO$ComDTOBuilder.class
+com/task/handle/Tags/TagDTO.class
+com/task/handle/Comments/ComModel.class
+com/task/handle/Tags/TagModel.class
+com/task/handle/Tags/TagRepository.class
+com/task/handle/Comments/ComModel$ComModelBuilder.class
+com/task/handle/Tags/TagDTO$TagDTOBuilder.class
+com/task/handle/Comments/ComService.class
+com/task/handle/Tags/TagController.class
+com/task/handle/Tags/TagModel$TagModelBuilder.class
+com/task/handle/Comments/ComDTO.class
+com/task/handle/Comments/ComRepository.class
+com/task/handle/Comments/ComController.class

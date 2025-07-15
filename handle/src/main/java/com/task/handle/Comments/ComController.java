@@ -2,9 +2,15 @@ package com.task.handle.Comments;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/comments")
@@ -13,26 +19,23 @@ public class ComController {
     @Autowired
     private ComService comService;
 
-    @PostMapping("/post")
-    public ResponseEntity<String> createComment(@RequestBody ComDTO dto) {
-        int rows = comService.saveComment(dto);
-        return ResponseEntity.ok("Inserted rows: " + rows);
+    @PostMapping("/create")
+    public ResponseEntity<?> create(@RequestBody @Valid ComDTO dto) {
+        return ResponseEntity.ok(comService.saveComment(dto));
     }
 
-    @GetMapping("/get")
-    public ResponseEntity<List<ComModel>> getAllComments() {
+    @GetMapping("/getAll")
+    public ResponseEntity<?> getAll() {
         return ResponseEntity.ok(comService.getAllComments());
     }
 
-    @PutMapping("/update/{id}")
-    public ResponseEntity<String> updateComment(@PathVariable int id, @RequestBody ComDTO dto) {
-    int rows = comService.updateComment(id, dto);
-    return ResponseEntity.ok("Updated rows: " + rows);
-}
+    @GetMapping("/tag/{tagId}")
+    public ResponseEntity<?> getByTag(@PathVariable Long tagId) {
+        return ResponseEntity.ok(comService.getByTagId(tagId));
+    }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deleteComment(@PathVariable int id) {
-    int rows = comService.deleteComment(id);
-    return ResponseEntity.ok("Deleted rows: " + rows);
-}
+    public ResponseEntity<?> delete(@PathVariable Long id) {
+        return ResponseEntity.ok(comService.deleteComment(id));
+    }
 }
