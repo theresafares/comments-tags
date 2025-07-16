@@ -1,0 +1,12 @@
+/Users/theresafares/Downloads/handle/src/main/java/com/task/handle/Comments/ComController.java
+/Users/theresafares/Downloads/handle/src/main/java/com/task/handle/Comments/ComModel.java
+/Users/theresafares/Downloads/handle/src/main/java/com/task/handle/Comments/ComRepository.java
+/Users/theresafares/Downloads/handle/src/main/java/com/task/handle/Comments/ComService.java
+/Users/theresafares/Downloads/handle/src/main/java/com/task/handle/Comments/dto/ComDTO.java
+/Users/theresafares/Downloads/handle/src/main/java/com/task/handle/HandleApplication.java
+/Users/theresafares/Downloads/handle/src/main/java/com/task/handle/Tags/TagController.java
+/Users/theresafares/Downloads/handle/src/main/java/com/task/handle/Tags/TagModel.java
+/Users/theresafares/Downloads/handle/src/main/java/com/task/handle/Tags/TagRepository.java
+/Users/theresafares/Downloads/handle/src/main/java/com/task/handle/Tags/TagService.java
+/Users/theresafares/Downloads/handle/src/main/java/com/task/handle/Tags/dto/TagDTO.java
+/Users/theresafares/Downloads/handle/src/main/java/com/task/handle/response/ApiResponse.java
